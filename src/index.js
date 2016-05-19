@@ -1,5 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+var Board = require('./Board');
+
+
+ReactDOM.render(
+    <Board knightPosition={[0,0]} />,
+    document.getElementById('root')
+);
