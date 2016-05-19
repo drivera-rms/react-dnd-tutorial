@@ -2,9 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 var Board = require('./Board');
+var observe = require('./Game').observe;
 
+var rootEL = document.getElementById('root');
 
-ReactDOM.render(
-    <Board knightPosition={[0,0]} />,
-    document.getElementById('root')
-);
+observe(function (knightPosition) {
+  ReactDOM.render(
+    <Board knightPosition={knightPosition} />,
+    rootEL
+  );
+});

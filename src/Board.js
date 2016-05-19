@@ -14,8 +14,8 @@ var Board = React.createClass({
 
 
   renderSquare: function (i) {
-    var x = i % 8;
-    var y = Math.floor(i / 8);
+    var y = i % 8;
+    var x = Math.floor(i / 8);
     var black = (x + y) % 2 === 1;
 
     var knightX = this.props.knightPosition[0];
